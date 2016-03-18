@@ -1,12 +1,12 @@
 (function() {
   loadOptions();
-  loginHandler();
+  saveHandler();
 })();
 
-function loginHandler() {
-  var loginButton = $('#loginButton');
+function saveHandler() {
+  var saveButton = $('#saveButton');
 
-  loginButton.on('click', function() {
+  saveButton.on('click', function() {
 
     var return_to = getQueryParam('return_to', 'pebblejs://close#');
     document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
